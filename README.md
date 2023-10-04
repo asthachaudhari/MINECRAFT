@@ -3,7 +3,7 @@ This is a repository belonging to the group members and it contains the frontend
 
 ### Steps:
 Make a folder  
-git clone https://github.com/Forms-MiniProject/Forms-Frontend.git  
+git clone https://github.com/Forms-MiniProject/Forms-Frontend-Group.git     
 cd Forms-Frontend  
 npm install  
 npm run dev  
