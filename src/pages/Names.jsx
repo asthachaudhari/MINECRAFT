@@ -301,7 +301,7 @@ export const productOptions = [
   "Piling",
   "China Clay",
   "Foundry",
-  "Cat Lighter",
+  "Cat Litter",
   "Drilling",
   "Calcium Lumps",
   "Water Proofing",

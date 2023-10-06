@@ -1,5 +1,9 @@
 //using usestate for managing component level
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import Input_Structure from "../components/Input_Structure"
+import TextArea_Structure from "../components/TextArea_Structure";
+import DropDown_Structure from "../components/DropDown_Structure";
+
 import {
   countryOptions,
   stateOptions,
@@ -10,8 +14,20 @@ import {
   packingQtyOptions,
   deliveryModeOptions,
 } from "./Names";
+import CheckList_Structure from "../components/CheckList_Structure";
 
 function Forms_Structure() {
+  const [processInfo, setProcessInfo] = React.useState({
+    Piling: false,
+    China_Clay: false,
+    Foundry: false,
+    Cat_Litter: false,
+    Drilling: false,
+    Calcium_Lumps: false,
+    Water_Proofing: false,
+    Sodium_Lumps: false,
+    Earthing: false
+  });
   const [formInfo, setformInfo] = React.useState({
     companyName: "",
     companyAddress: "",
@@ -27,7 +43,7 @@ function Forms_Structure() {
     whatsappNumber: "",
     wechatNumber: "",
     productBentonite: "",
-    product: "",
+    process: "",
     swelling: "",
     viscosity: "",
     color: "",
@@ -46,9 +62,25 @@ function Forms_Structure() {
     emailForQuotation: "",
   });
 
+  const handleInputChangeProcess = (e) => {
+    const { name, value } = e.target;
+    setProcessInfo({
+      ...processInfo,
+      [value]: !processInfo[value]
+    });
+  };
+
+  useEffect(() => {
+    const keys = Object.keys(processInfo)
+    const selectedprocesses = keys.filter((key) => processInfo[key])
+    setformInfo({
+      ...formInfo,
+      process: selectedprocesses
+    });
+  }, [processInfo]);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-
     setformInfo({
       ...formInfo,
       [name]: value,
@@ -70,77 +102,53 @@ function Forms_Structure() {
       <div className="companyInformation">
         <h2>Company Information</h2>
         <div>
-          <label htmlFor="companyName">Name of Company</label>
-          <input
-            type="text"
-            name="companyName"
-            value={formInfo.companyName}
-            onChange={handleInputChange}
-            placeholder="Company Name"
-          />
+          <Input_Structure 
+            label_value="Name of Company"
+            id_value="companyName" 
+            value={formInfo.companyName}  
+            onchange_value={handleInputChange}
+            placeholder_value="Company Name" />
         </div>
-
         <div>
-          <label htmlFor="companyAddress">Company Address</label>
-          <textarea
-            id="companyAddress"
-            name="companyAddress"
-            value={formInfo.companyAddress}
-            onChange={handleInputChange}
-            placeholder="Address of Company"
-          ></textarea>
+          <TextArea_Structure 
+            label_value="Company Address"
+            id_value="companyAddress" 
+            value={formInfo.companyAddress}  
+            onchange_value={handleInputChange}
+            placeholder_value="Address of Company" />
         </div>
-
         <div>
-          <label htmlFor="country">Country</label>
-          <select
-            id="country"
-            name="country"
-            value={formInfo.country}
-            onChange={handleInputChange}
-          >
-            {countryOptions.map((country, index) => (
-              <option key={index} value={country}>
-                {country}
-              </option>
-            ))}
-          </select>
+          <DropDown_Structure
+              label_value="Country"
+              id_value="country" 
+              value={formInfo.country}  
+              onchange_value={handleInputChange}
+              options_value={countryOptions} />
         </div>
-
         <div>
-          <label htmlFor="state">State</label>
-          <select
-            id="state"
-            name="state"
-            value={formInfo.state}
-            onChange={handleInputChange}
-          >
-            {stateOptions.map((state, index) => (
-              <option key={index} value={state}>
-                {state}
-              </option>
-            ))}
-          </select>
-
-          <label htmlFor="city">City/Village</label>
-          <input
-            type="text"
-            name="city"
-            value={formInfo.city}
-            onChange={handleInputChange}
-            placeholder="City/Village"
-          />
+          <DropDown_Structure
+              label_value="State"
+              id_value="state" 
+              value={formInfo.state}  
+              onchange_value={handleInputChange}
+              options_value={stateOptions} />
         </div>
-
         <div>
-          <label htmlFor="pincode">Pincode or Zipcode</label>
-          <input
-            type="number"
-            name="pincode"
-            value={formInfo.pincode}
-            onChange={handleInputChange}
-            placeholder="Pincode or Zipcode"
-          />
+          <Input_Structure 
+              label_value="City/Village"
+              id_value="city" 
+              value={formInfo.city}  
+              onchange_value={handleInputChange}
+              placeholder_value="City/Village" />
+        </div>
+        <div>
+          <Input_Structure 
+              label_value="Pincode or Zipcode"
+              type_value="number"
+              id_value="pincode" 
+              value={formInfo.pincode}  
+              onchange_value={handleInputChange}
+              placeholder_value="Pincode or Zipcode" />
         </div>
       </div>
 
@@ -222,36 +230,20 @@ function Forms_Structure() {
       <div className="productInfo">
         <h2>Product Information</h2>
         <div>
-          <label htmlFor="productBentonite">Name of Company</label>
-          <select
-            id="productBentonite"
-            name="productBentonite"
-            value={formInfo.productBentonite}
-            onChange={handleInputChange}
-          >
-            {BentoniteOptions.map((productBentonite, index) => (
-              <option key={index} value={productBentonite}>
-                {productBentonite}
-              </option>
-            ))}
-          </select>
+          <DropDown_Structure
+              label_value="Product Bentonite"
+              id_value="productBentonite" 
+              value={formInfo.productBentonite}  
+              onchange_value={handleInputChange}
+              options_value={BentoniteOptions} />
         </div>
-
         <div>
-          {productOptions.map((product, index) => (
-            <React.Fragment key={index}>
-              <label htmlFor="">
-                <input
-                  type="checkbox"
-                  name="selectedProduct"
-                  value={product}
-                  onChange={handleInputChange}
-                />
-                {product}
-              </label>
-              {(index + 1) % 4 == 0 && <br />}
-            </React.Fragment>
-          ))}
+          <CheckList_Structure
+              label_value="Processes"
+              id_value="selectedProcess" 
+              value={formInfo.process}  
+              onchange_value={handleInputChangeProcess}
+              options_value={productOptions} />
         </div>
       </div>
 
