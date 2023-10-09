@@ -1,4 +1,3 @@
-//using usestate for managing component level
 import React, { useEffect } from "react";
 import Input_Structure from "../components/Input_Structure"
 import TextArea_Structure from "../components/TextArea_Structure";
@@ -31,7 +30,7 @@ function Forms_Structure() {
   const [formInfo, setformInfo] = React.useState({
     companyName: "",
     companyAddress: "",
-    country: "India",
+    country: "",
     state: "",
     city: "",
     pincode: "",
@@ -119,111 +118,96 @@ function Forms_Structure() {
         </div>
         <div>
           <DropDown_Structure
-              label_value="Country"
-              id_value="country" 
-              value={formInfo.country}  
-              onchange_value={handleInputChange}
-              options_value={countryOptions} />
+            label_value="Country"
+            id_value="country" 
+            value={formInfo.country}  
+            onchange_value={handleInputChange}
+            options_value={countryOptions} />
         </div>
         <div>
           <DropDown_Structure
-              label_value="State"
-              id_value="state" 
-              value={formInfo.state}  
-              onchange_value={handleInputChange}
-              options_value={stateOptions} />
+            label_value="State"
+            id_value="state" 
+            value={formInfo.state}  
+            onchange_value={handleInputChange}
+            options_value={stateOptions} />
         </div>
         <div>
           <Input_Structure 
-              label_value="City/Village"
-              id_value="city" 
-              value={formInfo.city}  
-              onchange_value={handleInputChange}
-              placeholder_value="City/Village" />
+            label_value="City/Village"
+            id_value="city" 
+            value={formInfo.city}  
+            onchange_value={handleInputChange}
+            placeholder_value="City/Village" />
         </div>
         <div>
           <Input_Structure 
-              label_value="Pincode or Zipcode"
-              type_value="number"
-              id_value="pincode" 
-              value={formInfo.pincode}  
-              onchange_value={handleInputChange}
-              placeholder_value="Pincode or Zipcode" />
+            label_value="Pin Code or Zip Code"
+            type_value="number"
+            id_value="pincode" 
+            value={formInfo.pincode}  
+            onchange_value={handleInputChange}
+            placeholder_value="Pin Code or Zip Code" />
         </div>
       </div>
 
       <div className="contact">
         <h2>Contact</h2>
         <div>
-          <label htmlFor="contactPerson">Contact Person</label>
-          <input
-            type="text"
-            name="contactPerson"
-            value={formInfo.contactPerson}
-            onChange={handleInputChange}
-            placeholder="Contact Person Name"
-          />
+          <Input_Structure 
+            label_value="Contact Person"
+            id_value="contactPerson" 
+            value={formInfo.contactPerson}  
+            onchange_value={handleInputChange}
+            placeholder_value="Contact Person Name" />
         </div>
         <div>
-          <label htmlFor="designation">Designation</label>
-          <input
-            type="text"
-            name="designation"
-            value={formInfo.designation}
-            onChange={handleInputChange}
-            placeholder="Designation"
-          />
-
-          <label htmlFor="department">Department</label>
-          <input
-            type="text"
-            name="department"
-            value={formInfo.department}
-            onChange={handleInputChange}
-            placeholder="Department"
-          />
+          <Input_Structure 
+            label_value="Designation"
+            id_value="designation" 
+            value={formInfo.designation}  
+            onchange_value={handleInputChange}
+            placeholder_value="Designation" />
+          <Input_Structure 
+            label_value="Department"
+            id_value="department" 
+            value={formInfo.department}  
+            onchange_value={handleInputChange}
+            placeholder_value="Department" />
         </div>
-
         <div>
-          <label htmlFor="email">Email</label>
-          <input
-            type="text"
-            name="email"
-            value={formInfo.email}
-            onChange={handleInputChange}
-            placeholder="abc@gmail.com"
-          />
+          <Input_Structure 
+            label_value="Email"
+            type_value="email"
+            id_value="email" 
+            value={formInfo.email}  
+            onchange_value={handleInputChange}
+            placeholder_value="abc@gmail.com" />
         </div>
-
         <div>
-          <label htmlFor="contactNumber">Contact Number</label>
-          <input
-            type="number"
-            name="contactNumber"
-            value={formInfo.contactNumber}
-            onChange={handleInputChange}
-            placeholder="9898595956"
-          />
-
-          <label htmlFor="whatsappNumber">WhatsApp Number</label>
-          <input
-            type="number"
-            name="whatsappNumber"
-            value={formInfo.whatsappNumber}
-            onChange={handleInputChange}
-            placeholder="9898595956"
-          />
+          <Input_Structure 
+            label_value="Contact Number"
+            type_value="number"
+            id_value="contactNumber" 
+            value={formInfo.contactNumber}  
+            onchange_value={handleInputChange}
+            placeholder_value="989895956" />
+          <Input_Structure 
+            label_value="WhatsApp Number"
+            type_value="number"
+            id_value="whatsappNumber" 
+            value={formInfo.whatsappNumber}  
+            onchange_value={handleInputChange}
+            placeholder_value="989895956" />
         </div>
-
         <div>
-          <label htmlFor="wechatNumber">We Chat Number</label>
-          <input
-            type="number"
-            name="wechatNumber"
-            value={formInfo.wechatNumber}
-            onChange={handleInputChange}
-            placeholder="9898595956"
-          />
+          <Input_Structure 
+            label_value="We Chat Number"
+            type_value="number"
+            id_value="wechatNumber" 
+            value={formInfo.wechatNumberr}  
+            onchange_value={handleInputChange}
+            placeholder_value="989895956" />
         </div>
       </div>
 
@@ -231,230 +215,158 @@ function Forms_Structure() {
         <h2>Product Information</h2>
         <div>
           <DropDown_Structure
-              label_value="Product Bentonite"
-              id_value="productBentonite" 
-              value={formInfo.productBentonite}  
-              onchange_value={handleInputChange}
-              options_value={BentoniteOptions} />
+            label_value="Product Bentonite"
+            id_value="productBentonite" 
+            value={formInfo.productBentonite}  
+            onchange_value={handleInputChange}
+            options_value={BentoniteOptions} />
         </div>
         <div>
           <CheckList_Structure
-              label_value="Processes"
-              id_value="selectedProcess" 
-              value={formInfo.process}  
-              onchange_value={handleInputChangeProcess}
-              options_value={productOptions} />
+            label_value="Processes"
+            id_value="selectedProcess" 
+            value={formInfo.process}  
+            onchange_value={handleInputChangeProcess}
+            options_value={productOptions} />
         </div>
       </div>
 
       <div className="productParameters">
         <h2>Product Parameters</h2>
         <div>
-          <label htmlFor="swelling">Quality (Swelling)</label>
-          <input
-            type="text"
-            name="swelling"
-            value={formInfo.swelling}
-            onChange={handleInputChange}
-            placeholder="Parameters of Swelling"
-          />
-
-          <label htmlFor="viscosity">Quality (Viscosity)</label>
-          <input
-            type="text"
-            name="viscosity"
-            value={formInfo.viscosity}
-            onChange={handleInputChange}
-            placeholder="Parameters of Viscosity"
-          />
-
-          <label htmlFor="color">Quality (Color)</label>
-          <select
-            id="color"
-            name="color"
-            value={formInfo.color}
-            onChange={handleInputChange}
-          >
-            {colorOptions.map((color, index) => (
-              <option key={index} value={color}>
-                {color}
-              </option>
-            ))}
-          </select>
+          <Input_Structure 
+            label_value="Quality (Swelling)"
+            id_value="swelling" 
+            value={formInfo.swelling}  
+            onchange_value={handleInputChange}
+            placeholder_value="Parameters of Swelling" />
+          <Input_Structure 
+            label_value="Quality (Viscosity)"
+            id_value="viscosity" 
+            value={formInfo.viscosity}  
+            onchange_value={handleInputChange}
+            placeholder_value="Parameters of Viscosity" />
+          <DropDown_Structure
+            label_value="Quality (Color)"
+            id_value="color" 
+            value={formInfo.color}  
+            onchange_value={handleInputChange}
+            options_value={colorOptions} />
         </div>
-
         <div>
-          <label htmlFor="plate">Quality (Plate)</label>
-          <input
-            type="text"
-            name="plate"
-            value={formInfo.plate}
-            onChange={handleInputChange}
-            placeholder="Parameters of Plate"
-          />
-          <label htmlFor="filterloss">Quality (filter loss)</label>
-          <input
-            type="text"
-            name="filterloss"
-            value={formInfo.filterloss}
-            onChange={handleInputChange}
-            placeholder="Parameters of Filter Loss"
-          />
-          <label htmlFor="mb">Quality (MB)</label>
-          <input
-            type="text"
-            name="mb"
-            value={formInfo.mb}
-            onChange={handleInputChange}
-            placeholder="Parameters of MB"
-          />
+          <Input_Structure 
+            label_value="Quality (Plate)"
+            id_value="plate" 
+            value={formInfo.plate}  
+            onchange_value={handleInputChange}
+            placeholder_value="Parameters of Plate" />
+          <Input_Structure 
+            label_value="Quality (filter loss)"
+            id_value="filterloss" 
+            value={formInfo.filterloss}  
+            onchange_value={handleInputChange}
+            placeholder_value="Parameters of Filter Loss" />
+          <Input_Structure 
+            label_value="Quality (MB)"
+            id_value="mb" 
+            value={formInfo.mb}  
+            onchange_value={handleInputChange}
+            placeholder_value="Parameters of MB" />
         </div>
       </div>
 
       <div className="packingDelivery">
         <h2>Packing & Delivery</h2>
         <div>
-          <label htmlFor="packingType">Packing Type</label>
-          <select
-            id="packingType"
-            name="packingType"
-            value={formInfo.packingType}
-            onChange={handleInputChange}
-          >
-            {packingTypeOptions.map((packingType, index) => (
-              <option key={index} value={packingType}>
-                {packingType}
-              </option>
-            ))}
-          </select>
-
-          <label htmlFor="packingQty">Packing Qty</label>
-          <select
-            id="packingQty"
-            name="packingQty"
-            value={formInfo.packingQty}
-            onChange={handleInputChange}
-          >
-            {packingQtyOptions.map((packingQty, index) => (
-              <option key={index} value={packingQty}>
-                {packingQty}
-              </option>
-            ))}
-          </select>
+          <DropDown_Structure
+            label_value="Packing Type"
+            id_value="packingType" 
+            value={formInfo.packingType}  
+            onchange_value={handleInputChange}
+            options_value={packingTypeOptions} />
+          <DropDown_Structure
+            label_value="Packing Qty"
+            id_value="packingQty" 
+            value={formInfo.packingQty}  
+            onchange_value={handleInputChange}
+            options_value={packingQtyOptions} />
         </div>
-
         <div>
-          <label htmlFor="packingQtyValue">Packing Qty Value</label>
-          <input
-            type="text"
-            name="packingQtyValue"
-            value={formInfo.packingQtyValue}
-            onChange={handleInputChange}
-            placeholder="Packing Quantity Value"
-          />
-
-          <label htmlFor="deliveryMode">Delivery Mode</label>
-          <select
-            id="deliveryMode"
-            name="deliveryMode"
-            value={formInfo.deliveryMode}
-            onChange={handleInputChange}
-          >
-            {deliveryModeOptions.map((deliveryMode, index) => (
-              <option key={index} value={deliveryMode}>
-                {deliveryMode}
-              </option>
-            ))}
-          </select>
+          <Input_Structure 
+            label_value="Packing Qty Value"
+            id_value="packingQtyValue" 
+            value={formInfo.packingQtyValue}  
+            onchange_value={handleInputChange}
+            placeholder_value="Packing Quantity Value" />
+          <DropDown_Structure
+            label_value="Delivery Mode"
+            id_value="deliveryMode" 
+            value={formInfo.deliveryMode}  
+            onchange_value={handleInputChange}
+            options_value={deliveryModeOptions} />
         </div>
       </div>
 
       <div className="getSample">
         <h2>Get Sample</h2>
         <div>
-          <label htmlFor="getSampleOnAddress">Get Sample on Address</label>
-          <textarea
-            id="getSampleOnAddress"
-            name="getSampleOnAddress"
-            value={formInfo.getSampleOnAddress}
-            onChange={handleInputChange}
-          ></textarea>
+          <TextArea_Structure 
+            label_value="Get Sample on Address"
+            id_value="getSampleOnAddress" 
+            value={formInfo.getSampleOnAddress}  
+            onchange_value={handleInputChange}
+            placeholder_value="" />
         </div>
-
         <div>
-          <label htmlFor="getSampleInCountry">Country</label>
-          <select
-            id="getSampleInCountry"
-            name="getSampleInCountry"
-            value={formInfo.getSampleInCountry}
-            onChange={handleInputChange}
-          >
-            {countryOptions.map((getSampleInCountry, index) => (
-              <option key={index} value={getSampleInCountry}>
-                {getSampleInCountry}
-              </option>
-            ))}
-          </select>
+          <DropDown_Structure
+            label_value="Country"
+            id_value="getSampleInCountry" 
+            value={formInfo.getSampleInCountry}  
+            onchange_value={handleInputChange}
+            options_value={countryOptions} />
         </div>
-
         <div>
-          <label htmlFor="getSampleInState">State</label>
-          <select
-            id="getSampleInState"
-            name="getSampleInState"
-            value={formInfo.getSampleInState}
-            onChange={handleInputChange}
-          >
-            {stateOptions.map((getSampleInState, index) => (
-              <option key={index} value={getSampleInState}>
-                {getSampleInState}
-              </option>
-            ))}
-          </select>
-
-          <label htmlFor="getSampleInCity">City/Village</label>
-          <input
-            type="text"
-            name="getSampleInCity"
-            value={formInfo.getSampleInCity}
-            onChange={handleInputChange}
-            placeholder="City/Village"
-          />
+          <DropDown_Structure
+            label_value="State"
+            id_value="getSampleInState" 
+            value={formInfo.getSampleInState}  
+            onchange_value={handleInputChange}
+            options_value={stateOptions} />
+          <Input_Structure 
+            label_value="City/Village"
+            id_value="getSampleInCity" 
+            value={formInfo.getSampleInCity}  
+            onchange_value={handleInputChange}
+            placeholder_value="City/Village" />
         </div>
-
         <div>
-          <label htmlFor="getSampleOnPincode">Pin code or Zip code</label>
-          <input
-            type="number"
-            name="getSampleOnPincode"
-            value={formInfo.getSampleOnPincode}
-            onChange={handleInputChange}
-            placeholder="Pin code or Zip code"
-          />
+          <Input_Structure 
+            label_value="Pin code or Zip code"
+            type_value="number"
+            id_value="getSampleOnPincode" 
+            value={formInfo.getSampleOnPincode}  
+            onchange_value={handleInputChange}
+            placeholder_value="Pincode or Zipcode" />
         </div>
       </div>
 
       <div className="otherInfo">
         <h2>Other Information</h2>
         <div>
-          <label htmlFor="notesOrRemarks">Notes/Remarks</label>
-          <textarea
-            id="notesOrRemarks"
-            name="notesOrRemarks"
-            value={formInfo.notesOrRemarks}
-            onChange={handleInputChange}
-          ></textarea>
+          <TextArea_Structure 
+            label_value="Notes/Remarks"
+            id_value="notesOrRemarks" 
+            value={formInfo.notesOrRemarks}  
+            onchange_value={handleInputChange}
+            placeholder_value="" />
         </div>
-
         <div>
-          <label htmlFor="emailForQuotation">Email for Quotation</label>
-          <input
-            type="text"
-            name="emailForQuotation"
-            value={formInfo.emailForQuotation}
-            onChange={handleInputChange}
-            placeholder="Give Email to get Quotation"
-          />
+          <Input_Structure 
+            label_value="Email for Quotation"
+            id_value="emailForQuotation" 
+            value={formInfo.emailForQuotation}  
+            onchange_value={handleInputChange}
+            placeholder_value="Give Email to get Quotation" />
         </div>
       </div>
 
