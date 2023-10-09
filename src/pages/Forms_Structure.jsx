@@ -81,9 +81,9 @@ function Forms_Structure() {
     });
   }, [processInfo]);
 
-  useEffect(() => {
+  function onsubmit(){
     console.log("formInfo state:", formInfo);
-  }, [formInfo]);
+  }
 
   return (
     <form>
@@ -148,7 +148,7 @@ function Forms_Structure() {
           handleInputChange={handleInputChange}
           />
         </div>
-      <button className="send-button">Send</button>
+        <button type='button' className="send-button" onClick={onsubmit}>Send</button>
     </form>
   );
 }
