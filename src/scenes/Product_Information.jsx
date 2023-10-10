@@ -4,10 +4,10 @@ import CheckList_Structure from "../components/CheckList_Structure";
 
 import {
     BentoniteOptions,
-    productOptions
+    applicationOptions
   } from "./Names";
 
-function Product_Information({productBentonite, process, handleInputChange}) {
+function Product_Information({productBentonite, application, handleInputChange}) {
     return (
         <>
             <div className="productInfo">
@@ -22,11 +22,11 @@ function Product_Information({productBentonite, process, handleInputChange}) {
                 </div>
                 <div>
                 <CheckList_Structure
-                    label_value="Processes"
-                    id_value="selectedProcess" 
-                    value={process}  
+                    label_value="Application"
+                    id_value="selectedApplication" 
+                    value={application}  
                     onchange_value={handleInputChange}
-                    options_value={productOptions} />
+                    options_value={applicationOptions} />
                 </div>
             </div>
         </>

@@ -35,6 +35,8 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                     value={getSampleInState}  
                     onchange_value={handleInputChange}
                     options_value={stateOptions} />
+                </div>
+                <div>
                 <Input_Structure 
                     label_value="City/Village"
                     id_value="getSampleInCity" 

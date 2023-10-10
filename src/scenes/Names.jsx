@@ -298,7 +298,7 @@ export const BentoniteOptions = [
   "Other",
 ];
 
-export const productOptions = [
+export const applicationOptions = [
   "Piling",
   "China Clay",
   "Foundry",

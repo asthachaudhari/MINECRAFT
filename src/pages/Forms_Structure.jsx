@@ -37,8 +37,6 @@ function Forms_Structure() {
     productBentonite: "",
     process: "",
     packingType: "",
-    packingQty: "",
-    packingQtyValue: "",
     deliveryMode: "",
     getSampleOnAddress: "",
     getSampleInCountry: "",
@@ -51,7 +49,7 @@ function Forms_Structure() {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    if (name === "selectedProcess") {
+    if (name === "selectedApplication") {
       setProcessInfo({
         ...processInfo,
         [value]: !processInfo[value]
@@ -108,7 +106,7 @@ function Forms_Structure() {
           />
         <Product_Information 
           productBentonite={formInfo.productBentonite}
-          process={formInfo.process}
+          application={formInfo.application}
           handleInputChange={handleInputChange}
           />
         <PackagingDelivery_Information 
