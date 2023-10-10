@@ -1,7 +1,7 @@
 import React from "react";
 import Input_Structure from "../components/Input_Structure"
 
-function Contact_Information({contactPerson, designation, department, email, contactNumber, whatsappNumber, wechatNumber, handleInputChange}) {
+function Contact_Information({contactPerson, designation, department, email, contactNumber, whatsappNumber, wechatNumber, website, handleInputChange}) {
     return (
         <>
             <div className="contact information">
@@ -57,6 +57,13 @@ function Contact_Information({contactPerson, designation, department, email, con
                     type_value="number"
                     id_value="wechatNumber" 
                     value={wechatNumber}  
+                    onchange_value={handleInputChange} />
+                </div>
+                <div>
+                <Input_Structure 
+                    label_value="Website"
+                    id_value="website" 
+                    value={website}  
                     onchange_value={handleInputChange} />
                 </div>
             </div>

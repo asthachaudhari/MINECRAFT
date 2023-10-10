@@ -34,6 +34,7 @@ function Forms_Structure() {
     contactNumber: "",
     whatsappNumber: "",
     wechatNumber: "",
+    website: "",
     productBentonite: "",
     process: "",
     packingType: "",
@@ -102,6 +103,7 @@ function Forms_Structure() {
           contactNumber={formInfo.contactNumber}
           whatsappNumber={formInfo.whatsappNumber}
           wechatNumber={formInfo.wechatNumber}
+          website={formInfo.website}
           handleInputChange={handleInputChange}
           />
         <Product_Information 
