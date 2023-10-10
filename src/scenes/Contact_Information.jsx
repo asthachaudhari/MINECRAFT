@@ -11,22 +11,19 @@ function Contact_Information({contactPerson, designation, department, email, con
                     label_value="Contact Person"
                     id_value="contactPerson" 
                     value={contactPerson}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="Contact Person Name" />
+                    onchange_value={handleInputChange} />
                 </div>
                 <div>
                 <Input_Structure 
                     label_value="Designation"
                     id_value="designation" 
                     value={designation}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="Designation" />
+                    onchange_value={handleInputChange} />
                 <Input_Structure 
                     label_value="Department"
                     id_value="department" 
                     value={department}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="Department" />
+                    onchange_value={handleInputChange} />
                 </div>
                 <div>
                 <Input_Structure 
@@ -34,8 +31,7 @@ function Contact_Information({contactPerson, designation, department, email, con
                     type_value="email"
                     id_value="email" 
                     value={email}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="abc@gmail.com" />
+                    onchange_value={handleInputChange} />
                 </div>
                 <div>
                 <Input_Structure 
@@ -43,15 +39,13 @@ function Contact_Information({contactPerson, designation, department, email, con
                     type_value="number"
                     id_value="contactNumber" 
                     value={contactNumber}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="989895956" />
+                    onchange_value={handleInputChange} />
                 <Input_Structure 
                     label_value="WhatsApp Number"
                     type_value="number"
                     id_value="whatsappNumber" 
                     value={whatsappNumber}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="989895956" />
+                    onchange_value={handleInputChange} />
                 </div>
                 <div>
                 <Input_Structure 
@@ -59,8 +53,7 @@ function Contact_Information({contactPerson, designation, department, email, con
                     type_value="number"
                     id_value="wechatNumber" 
                     value={wechatNumber}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="989895956" />
+                    onchange_value={handleInputChange} />
                 </div>
             </div>
         </>

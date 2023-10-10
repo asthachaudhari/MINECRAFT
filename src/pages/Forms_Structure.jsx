@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Company_Information from "../scenes/Company_Information";
 import Contact_Information from "../scenes/Contact_Information";
 import Product_Information from "../scenes/Product_Information";
-import Product_Parameters from "../scenes/Product_Parameters";
 import PackagingDelivery_Information from "../scenes/PackagingDelivery_Information";
 import Get_Sample from "../scenes/Get_Sample";
 import Other_Information from "../scenes/Other_Information";
@@ -37,12 +36,6 @@ function Forms_Structure() {
     wechatNumber: "",
     productBentonite: "",
     process: "",
-    swelling: "",
-    viscosity: "",
-    color: "",
-    plate: "",
-    filterloss: "",
-    quality: "",
     packingType: "",
     packingQty: "",
     packingQtyValue: "",
@@ -116,15 +109,6 @@ function Forms_Structure() {
         <Product_Information 
           productBentonite={formInfo.productBentonite}
           process={formInfo.process}
-          handleInputChange={handleInputChange}
-          />
-        <Product_Parameters
-          swelling={formInfo.swelling}
-          viscosity={formInfo.viscosity}
-          color={formInfo.color}
-          plate={formInfo.plate}
-          filterloss={formInfo.filterloss}
-          quality={formInfo.quality}
           handleInputChange={handleInputChange}
           />
         <PackagingDelivery_Information 

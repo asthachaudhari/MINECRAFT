@@ -18,8 +18,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                     label_value="Get Sample on Address"
                     id_value="getSampleOnAddress" 
                     value={getSampleOnAddress}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="" />
+                    onchange_value={handleInputChange} />
                 </div>
                 <div>
                 <DropDown_Structure
@@ -40,8 +39,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                     label_value="City/Village"
                     id_value="getSampleInCity" 
                     value={getSampleInCity}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="City/Village" />
+                    onchange_value={handleInputChange} />
                 </div>
                 <div>
                 <Input_Structure 
@@ -49,8 +47,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                     type_value="number"
                     id_value="getSampleOnPincode" 
                     value={getSampleOnPincode}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="Pincode or Zipcode" />
+                    onchange_value={handleInputChange} />
                 </div>
             </div>
         </>

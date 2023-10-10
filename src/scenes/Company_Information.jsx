@@ -18,16 +18,14 @@ function Company_Information({companyName, companyAddress, country, state, city,
                     label_value="Name of Company"
                     id_value="companyName" 
                     value={companyName}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="Company Name" />
+                    onchange_value={handleInputChange} />
                 </div>
                 <div>
                 <TextArea_Structure 
                     label_value="Company Address"
                     id_value="companyAddress" 
                     value={companyAddress}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="Address of Company" />
+                    onchange_value={handleInputChange} />
                 </div>
                 <div>
                 <DropDown_Structure
@@ -50,8 +48,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                     label_value="City/Village"
                     id_value="city" 
                     value={city}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="City/Village" />
+                    onchange_value={handleInputChange} />
                 </div>
                 <div>
                 <Input_Structure 
@@ -59,8 +56,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                     type_value="number"
                     id_value="pincode" 
                     value={pincode}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="Pin Code or Zip Code" />
+                    onchange_value={handleInputChange} />
                 </div>
             </div>
         </>

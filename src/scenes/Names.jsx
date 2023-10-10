@@ -294,7 +294,7 @@ export const BentoniteOptions = [
   "Select Type",
   "Powder",
   "Granules",
-  "Lump",
+  "Lumps",
   "Other",
 ];
 
@@ -310,8 +310,6 @@ export const productOptions = [
   "Earthing",
 ];
 
-export const colorOptions = ["Yellow", "Cream", "Green", "Red", "Other"];
-
 export const packingTypeOptions = [
   "Select",
   "Jumbo OLD",
@@ -323,8 +321,6 @@ export const packingTypeOptions = [
   "PP New 25 KG",
   "PP New 60 KG",
 ];
-
-export const packingQtyOptions = ["Select", "Total", "Minimum", "Pre-Shipment"];
 
 export const deliveryModeOptions = [
   "Select",

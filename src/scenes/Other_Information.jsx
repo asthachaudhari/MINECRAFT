@@ -13,16 +13,14 @@ function Other_Information({notesOrRemarks, emailForQuotation, handleInputChange
                     label_value="Notes/Remarks"
                     id_value="notesOrRemarks" 
                     value={notesOrRemarks}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="" />
+                    onchange_value={handleInputChange} />
                 </div>
                 <div>
                 <Input_Structure 
                     label_value="Email for Quotation"
                     id_value="emailForQuotation" 
                     value={emailForQuotation}  
-                    onchange_value={handleInputChange}
-                    placeholder_value="Give Email to get Quotation" />
+                    onchange_value={handleInputChange} />
                 </div>
             </div>
         </>
