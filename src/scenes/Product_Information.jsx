@@ -7,7 +7,7 @@ import {
     applicationOptions
   } from "./Names";
 
-function Product_Information({productBentonite, application, handleInputChange}) {
+function Product_Information({productBentonite, productBentoniteOther, application, handleInputChange}) {
     return (
         <>
             <div className="productInfo">
@@ -19,6 +19,12 @@ function Product_Information({productBentonite, application, handleInputChange})
                     value={productBentonite}  
                     onchange_value={handleInputChange}
                     options_value={BentoniteOptions} />
+                <input disabled={(productBentonite === "Other")?false:true}
+                    id="productBentoniteOther"
+                    type="text"
+                    name="productBentoniteOther"
+                    value={productBentoniteOther}
+                    onChange={handleInputChange} />
                 </div>
                 <div>
                 <CheckList_Structure

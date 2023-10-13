@@ -36,6 +36,7 @@ function Forms_Structure() {
     wechatNumber: "",
     website: "",
     productBentonite: "",
+    productBentoniteOther: "",
     process: "",
     packingType: "",
     deliveryMode: "",
@@ -56,10 +57,17 @@ function Forms_Structure() {
         [value]: !processInfo[value]
       });
     }
-    else {
+    else if (name === "productBentonite") {
       setformInfo({
         ...formInfo,
         [name]: value,
+        productBentoniteOther: ""
+      });
+    }
+    else {
+      setformInfo({
+        ...formInfo,
+        [name]: value
       });
     }
   };
@@ -108,6 +116,7 @@ function Forms_Structure() {
           />
         <Product_Information 
           productBentonite={formInfo.productBentonite}
+          productBentoniteOther={formInfo.productBentoniteOther}
           application={formInfo.application}
           handleInputChange={handleInputChange}
           />
