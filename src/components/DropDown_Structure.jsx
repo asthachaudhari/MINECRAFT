@@ -10,9 +10,9 @@ function DropDown_Structure({label_value, options_value, id_value, value, onchan
             value={value}
             onChange={onchange_value}
           >
-            {options_value.map((country, index) => (
-              <option key={index} value={country}>
-                {country}
+            {options_value.map((values, index) => (
+              <option key={index} value={values}>
+                {values}
               </option>
             ))}
           </select>

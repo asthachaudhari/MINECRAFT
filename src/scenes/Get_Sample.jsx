@@ -14,42 +14,42 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
             <div className="getSample">
                 <h2>Get Sample</h2>
                 <div>
-                <TextArea_Structure 
-                    label_value="Get Sample on Address"
-                    id_value="getSampleOnAddress" 
-                    value={getSampleOnAddress}  
-                    onchange_value={handleInputChange} />
+                    <TextArea_Structure 
+                        label_value="Get Sample on Address"
+                        id_value="getSampleOnAddress" 
+                        value={getSampleOnAddress}  
+                        onchange_value={handleInputChange} />
                 </div>
                 <div>
-                <DropDown_Structure
-                    label_value="Country"
-                    id_value="getSampleInCountry" 
-                    value={getSampleInCountry}  
-                    onchange_value={handleInputChange}
-                    options_value={countryOptions} />
+                    <DropDown_Structure
+                        label_value="Country"
+                        id_value="getSampleInCountry" 
+                        value={getSampleInCountry}  
+                        onchange_value={handleInputChange}
+                        options_value={countryOptions} />
                 </div>
                 <div>
-                <DropDown_Structure
-                    label_value="State"
-                    id_value="getSampleInState" 
-                    value={getSampleInState}  
-                    onchange_value={handleInputChange}
-                    options_value={stateOptions} />
+                    <DropDown_Structure
+                        label_value="State"
+                        id_value="getSampleInState" 
+                        value={getSampleInState}  
+                        onchange_value={handleInputChange}
+                        options_value={stateOptions} />
                 </div>
                 <div>
-                <Input_Structure 
-                    label_value="City/Village"
-                    id_value="getSampleInCity" 
-                    value={getSampleInCity}  
-                    onchange_value={handleInputChange} />
+                    <Input_Structure 
+                        label_value="City/Village"
+                        id_value="getSampleInCity" 
+                        value={getSampleInCity}  
+                        onchange_value={handleInputChange} />
                 </div>
                 <div>
-                <Input_Structure 
-                    label_value="Pin code or Zip code"
-                    type_value="number"
-                    id_value="getSampleOnPincode" 
-                    value={getSampleOnPincode}  
-                    onchange_value={handleInputChange} />
+                    <Input_Structure 
+                        label_value="Pin code or Zip code"
+                        type_value="number"
+                        id_value="getSampleOnPincode" 
+                        value={getSampleOnPincode}  
+                        onchange_value={handleInputChange} />
                 </div>
             </div>
         </>

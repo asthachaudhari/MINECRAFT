@@ -27,6 +27,7 @@ function Forms_Structure() {
     state: "",
     city: "",
     pincode: "",
+    gender: "Mr",
     contactPerson: "",
     designation: "",
     department: "",
@@ -105,6 +106,7 @@ function Forms_Structure() {
           />
         < Contact_Information 
           contactPerson={formInfo.contactPerson}
+          gender={formInfo.gender}
           designation={formInfo.designation}
           department={formInfo.department}
           email={formInfo.email}

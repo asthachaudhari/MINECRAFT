@@ -245,7 +245,7 @@ export const countryOptions = [
   "Yemen",
   "Zaire",
   "Zambia",
-  "Zimbabwe",
+  "Zimbabwe"
 ];
 
 export const stateOptions = [
@@ -287,7 +287,7 @@ export const stateOptions = [
   "Tripura",
   "Uttar Pradesh",
   "Uttarakhand",
-  "West Bengal",
+  "West Bengal"
 ];
 
 export const BentoniteOptions = [
@@ -295,7 +295,7 @@ export const BentoniteOptions = [
   "Powder",
   "Granules",
   "Lumps",
-  "Other",
+  "Other"
 ];
 
 export const applicationOptions = [
@@ -307,7 +307,7 @@ export const applicationOptions = [
   "Calcium Lumps",
   "Water Proofing",
   "Sodium Lumps",
-  "Earthing",
+  "Earthing"
 ];
 
 export const packingTypeOptions = [
@@ -319,7 +319,7 @@ export const packingTypeOptions = [
   "Paper New 25 KG",
   "PP OLD",
   "PP New 25 KG",
-  "PP New 60 KG",
+  "PP New 60 KG"
 ];
 
 export const deliveryModeOptions = [
@@ -329,5 +329,11 @@ export const deliveryModeOptions = [
   "Local Mode - Rack Load (BCN - 1700)",
   "Export Mode - 20' Container",
   "Export Mode - Bulk",
-  "Export Mode - Destination Port",
+  "Export Mode - Destination Port"
+];
+
+export const genderOptions = [
+  "Mr",
+  "Mrs",
+  "Ms"
 ];

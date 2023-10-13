@@ -14,20 +14,20 @@ function PackagingDelivery_Information({packingType, packingQty, packingQtyValue
             <div className="packingDelivery">
                 <h2>Packing and Delivery Information</h2>
                 <div>
-                <DropDown_Structure
-                    label_value="Packing Type"
-                    id_value="packingType" 
-                    value={packingType}  
-                    onchange_value={handleInputChange}
-                    options_value={packingTypeOptions} />
+                    <DropDown_Structure
+                        label_value="Packing Type"
+                        id_value="packingType" 
+                        value={packingType}  
+                        onchange_value={handleInputChange}
+                        options_value={packingTypeOptions} />
                 </div>
                 <div>
-                <DropDown_Structure
-                    label_value="Delivery Mode"
-                    id_value="deliveryMode" 
-                    value={deliveryMode}  
-                    onchange_value={handleInputChange}
-                    options_value={deliveryModeOptions} />
+                    <DropDown_Structure
+                        label_value="Delivery Mode"
+                        id_value="deliveryMode" 
+                        value={deliveryMode}  
+                        onchange_value={handleInputChange}
+                        options_value={deliveryModeOptions} />
                 </div>
             </div>
         </>

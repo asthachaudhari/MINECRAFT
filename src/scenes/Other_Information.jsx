@@ -9,18 +9,18 @@ function Other_Information({notesOrRemarks, emailForQuotation, handleInputChange
             <div className="otherInfo">
                 <h2>Other Information</h2>
                 <div>
-                <TextArea_Structure 
-                    label_value="Notes/Remarks"
-                    id_value="notesOrRemarks" 
-                    value={notesOrRemarks}  
-                    onchange_value={handleInputChange} />
+                    <TextArea_Structure 
+                        label_value="Notes/Remarks"
+                        id_value="notesOrRemarks" 
+                        value={notesOrRemarks}  
+                        onchange_value={handleInputChange} />
                 </div>
                 <div>
-                <Input_Structure 
-                    label_value="Email for Quotation"
-                    id_value="emailForQuotation" 
-                    value={emailForQuotation}  
-                    onchange_value={handleInputChange} />
+                    <Input_Structure 
+                        label_value="Email for Quotation"
+                        id_value="emailForQuotation" 
+                        value={emailForQuotation}  
+                        onchange_value={handleInputChange} />
                 </div>
             </div>
         </>
