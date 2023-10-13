@@ -15,6 +15,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                 <h2>Get Sample</h2>
                 <div>
                     <TextArea_Structure 
+                        requirement={true}
                         label_value="Get Sample on Address"
                         id_value="getSampleOnAddress" 
                         value={getSampleOnAddress}  
@@ -22,6 +23,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                 </div>
                 <div>
                     <DropDown_Structure
+                        requirement={true}
                         label_value="Country"
                         id_value="getSampleInCountry" 
                         value={getSampleInCountry}  
@@ -30,6 +32,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                 </div>
                 <div>
                     <DropDown_Structure
+                        requirement={true}
                         label_value="State"
                         id_value="getSampleInState" 
                         value={getSampleInState}  
@@ -38,6 +41,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                 </div>
                 <div>
                     <Input_Structure 
+                        requirement={true}
                         label_value="City/Village"
                         id_value="getSampleInCity" 
                         value={getSampleInCity}  
@@ -45,6 +49,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                 </div>
                 <div>
                     <Input_Structure 
+                        requirement={true}
                         label_value="Pin code or Zip code"
                         type_value="number"
                         id_value="getSampleOnPincode" 

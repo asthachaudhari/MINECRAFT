@@ -1,6 +1,6 @@
 import React from "react";
 
-function CheckList_Structure({label_value, options_value, id_value, value, onchange_value}) {
+function CheckList_Structure({label_value, options_value, id_value, onchange_value}) {
     return (
         <>
           <label htmlFor={id_value}>{label_value}</label>

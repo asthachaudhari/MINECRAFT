@@ -21,6 +21,7 @@ function Contact_Information({contactPerson, gender, designation, department, em
                             ))}
                     </select>
                     <input
+                        required={true}
                         id="contactPerson"
                         type="text"
                         name="contactPerson"
@@ -44,6 +45,7 @@ function Contact_Information({contactPerson, gender, designation, department, em
                 </div>
                 <div>
                     <Input_Structure 
+                        requirement={true}
                         label_value="Email"
                         type_value="email"
                         id_value="email" 
@@ -52,6 +54,7 @@ function Contact_Information({contactPerson, gender, designation, department, em
                 </div>
                 <div>
                     <Input_Structure 
+                        requirement={true}
                         label_value="Contact Number"
                         type_value="number"
                         id_value="contactNumber" 

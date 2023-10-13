@@ -15,6 +15,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                 <h2>Company Information</h2>
                 <div>
                     <Input_Structure 
+                        requirement={true}
                         label_value="Name of Company"
                         id_value="companyName" 
                         value={companyName}  
@@ -22,6 +23,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                 </div>
                 <div>
                     <TextArea_Structure 
+                        requirement={true}
                         label_value="Company Address"
                         id_value="companyAddress" 
                         value={companyAddress}  
@@ -29,6 +31,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                 </div>
                 <div>
                     <DropDown_Structure
+                        requirement={true}
                         label_value="Country"
                         id_value="country" 
                         value={country}  
@@ -37,6 +40,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                 </div>
                 <div>
                     <DropDown_Structure
+                        requirement={true}
                         label_value="State"
                         id_value="state" 
                         value={state}  
@@ -52,6 +56,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                 </div>
                 <div>
                     <Input_Structure 
+                        requirement={true}
                         label_value="Pin Code or Zip Code"
                         type_value="number"
                         id_value="pincode" 

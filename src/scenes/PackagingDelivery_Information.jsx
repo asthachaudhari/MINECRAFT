@@ -15,6 +15,7 @@ function PackagingDelivery_Information({packingType, packingQty, packingQtyValue
                 <h2>Packing and Delivery Information</h2>
                 <div>
                     <DropDown_Structure
+                        requirement={true}
                         label_value="Packing Type"
                         id_value="packingType" 
                         value={packingType}  
@@ -23,6 +24,7 @@ function PackagingDelivery_Information({packingType, packingQty, packingQtyValue
                 </div>
                 <div>
                     <DropDown_Structure
+                        requirement={true}
                         label_value="Delivery Mode"
                         id_value="deliveryMode" 
                         value={deliveryMode}  

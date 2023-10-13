@@ -38,7 +38,7 @@ function Forms_Structure() {
     website: "",
     productBentonite: "",
     productBentoniteOther: "",
-    process: "",
+    application: "",
     packingType: "",
     deliveryMode: "",
     getSampleOnAddress: "",
@@ -78,16 +78,17 @@ function Forms_Structure() {
     const selectedprocesses = keys.filter((key) => processInfo[key])
     setformInfo({
       ...formInfo,
-      process: selectedprocesses
+      application: selectedprocesses
     });
   }, [processInfo]);
 
-  function onsubmit(){
+  const handleSubmit = event => {
     console.log("formInfo state:", formInfo);
+    event.preventDefault();
   }
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h5>
         <strong>
           Fill out below Inquiry-form and get Quotation on Email, * Fields are
@@ -143,7 +144,7 @@ function Forms_Structure() {
           handleInputChange={handleInputChange}
           />
         </div>
-        <button type='button' className="send-button" onClick={onsubmit}>Send</button>
+        <input type='submit' id="submit-button" name="submit-button" />
     </form>
   );
 }

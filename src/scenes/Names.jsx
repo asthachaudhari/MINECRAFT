@@ -1,5 +1,4 @@
 export const countryOptions = [
-  "Select Country",
   "Afghanistan",
   "Albania",
   "Algeria",
@@ -249,7 +248,6 @@ export const countryOptions = [
 ];
 
 export const stateOptions = [
-  "Select State",
   "Out of India",
   "Andaman and Nicobar Islands",
   "Andhra Pradesh",
@@ -291,7 +289,6 @@ export const stateOptions = [
 ];
 
 export const BentoniteOptions = [
-  "Select Type",
   "Powder",
   "Granules",
   "Lumps",
@@ -311,7 +308,6 @@ export const applicationOptions = [
 ];
 
 export const packingTypeOptions = [
-  "Select",
   "Jumbo OLD",
   "Jumbo New 1000 KG",
   "Jumbo New 1200 KG",
@@ -323,7 +319,6 @@ export const packingTypeOptions = [
 ];
 
 export const deliveryModeOptions = [
-  "Select",
   "Local Mode - Sea (Bost - 2835)",
   "Local Mode - Road (Bost - 3815)",
   "Local Mode - Rack Load (BCN - 1700)",

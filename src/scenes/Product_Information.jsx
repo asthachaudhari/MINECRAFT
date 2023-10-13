@@ -14,12 +14,14 @@ function Product_Information({productBentonite, productBentoniteOther, applicati
                 <h2>Product Information</h2>
                 <div>
                     <DropDown_Structure
+                        requirement={true}
                         label_value="Product Bentonite"
                         id_value="productBentonite" 
                         value={productBentonite}  
                         onchange_value={handleInputChange}
                         options_value={BentoniteOptions} />
                     <input disabled={(productBentonite === "Other")?false:true}
+                        required={true}
                         id="productBentoniteOther"
                         type="text"
                         name="productBentoniteOther"
@@ -27,6 +29,14 @@ function Product_Information({productBentonite, productBentoniteOther, applicati
                         onChange={handleInputChange} />
                 </div>
                 <div>
+                    <input required={true}
+                    type="checkbox"
+                    id="selects"
+                    name='selects'
+                    checked={(application.length !== 0)?true:false}
+                    onChange={() => {}}
+                    style={{height:"1px", width: "1px", margin: "0px"}}
+                    />
                     <CheckList_Structure
                         label_value="Application"
                         id_value="selectedApplication" 
