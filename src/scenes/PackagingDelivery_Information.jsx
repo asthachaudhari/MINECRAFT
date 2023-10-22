@@ -12,7 +12,7 @@ function PackagingDelivery_Information({packingType, packingQty, packingQtyValue
     return (
         <>
             <div className="packingDelivery">
-                <h2>Packing and Delivery Information</h2>
+            <div className="sub-heading">Packing and Delivery Information</div>
                 <div>
                     <DropDown_Structure
                         requirement={true}

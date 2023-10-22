@@ -12,7 +12,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
     return (
         <>
             <div className="getSample">
-                <h2>Get Sample</h2>
+            <div className="sub-heading">Get Sample</div>
                 <div>
                     <TextArea_Structure 
                         requirement={true}

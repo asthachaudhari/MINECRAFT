@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-image: url("../images/page-header.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1vw;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+form{
+    background-color: rgba(0, 0, 0, 0.5);
+    width:80%;
+    color: white;
+    margin-left: 10%; 
+}
+
+.heading{
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: rgb(255, 196, 0);
+    font-size: 250%;
+}
+
+.instructions{
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    color: white;
+    font-size: 150%;
+}
+
+.sub-heading{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5%;;
+    color: rgb(255, 196, 0);
+    font-size: 175%;
+}
+
+.parent-container{
+    display: flex;
+    flex-wrap: wrap; 
+    padding-bottom: 10px;
+}
+
+.component{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 42.5%;
+    box-sizing: border-box;
+    margin: 5px 0% 5px 5%;
+}
+
+.component label{
+    font-size: 1.4rem;
+    width: 40%;
+    height: 1rem;
+}
+
+.component input{
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    height: 2rem;
+    width: 60%;
+}
+
+.component textarea{
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    height: 2rem;
+    width: 60%;
+    resize: vertical;
+}
+
+.component select{
+    border-radius: 0.2em;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    height: 2rem;
+    width: 60%;
+    padding-left: 1%;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+}
+
+.product-infromation-component{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 95%;
+    box-sizing: border-box;
+    margin: 5px 5% 5px 5%;
+}
+
+.product-infromation-component label{
+    font-size: 1.4rem;
+    width: 20%;
+    height: 1rem;
+}
+
+.product-infromation-component select{
+    margin-right: 10px;
+    border-radius: 0.2em;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    height: 2rem;
+    width: 20%;
+    padding-left: 1%;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem top 50%;
+    background-size: 0.65rem auto;
+}
+
+.product-infromation-component input{
+    font-size: 1.4rem;
+    box-sizing: border-box;
+    height: 2rem;
+    width: 20%;
+}
+
+.product-infromation-component-checkbox{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 95%;
+    box-sizing: border-box;
+    margin: 5px 5% 5px 5%;
+}
+
+.product-infromation-component-checkbox-label{
+    font-size: 1.4rem;
+    width: 20%;
+    height: 1rem; 
+}
+
+.product-infromation-component-checkbox-boxes{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;  
+}
+
+.product-infromation-component-checkbox-boxes input{
+    display: inline-flex;
+    margin-right: 10px;
+    width: 1.8rem;
+}
+.product-infromation-component-checkbox-boxes label{
+    display: inline-flex;
+    flex-basis: 25%;
+    font-size:  1.2rem;
+    margin-bottom: 10px;
+    align-items: center
+}
+
+@media only screen and (max-width:800px){ 
+    .component input{
+        height: 2.5rem;
+    }
+    .component textarea{
+        height: 2.5rem;
+    }
+    .component select{
+        height: 2.5rem;
+    }
+}
+
+@media only screen and (max-width:500px){ 
+    .heading{
+        padding-bottom: 2px;
+        font-size: 400%;
+    }
+    .instructions{
+        font-size: 250%;
+    }
+    .sub-heading{
+        font-size: 275% ;
+    }
+    .component{   
+        flex-basis: 70%;
+        margin: 5px 15% 5px 15%;
+    }
+    .component label{
+        font-size: 2.2rem;
+        height: 2rem;
+    }
+    .component input{
+        font-size: 2rem;
+        height: 3rem;
+    }
+    .component textarea{
+        font-size: 2rem;
+        height: 3rem;
+    }
+    .component select{
+        font-size: 1.8rem;
+        height: 3rem;
+    }
+    .product-infromation-component{
+        flex-basis: 70%;
+        margin: 5px 15% 5px 15%;
+    }
+    .product-infromation-component-checkbox{
+        flex-basis: 70%;
+        margin: 5px 15% 5px 15%;
+    }
+    .product-infromation-component label{
+        font-size: 2.2rem;
+        height: 2rem;
+        width: 40%;
+    }
+    .product-infromation-component select{
+        font-size: 1.8rem;
+        height: 3rem;
+        width: 30%;
+    }
+    .product-infromation-component input{
+        font-size: 2rem;
+        height: 3rem;
+        width: 30%;
+    }
+    .product-infromation-component-checkbox-label{
+        font-size: 2.2rem;
+        width: 20%;
+        height: 2rem; 
+        margin-right: 20px;
+    }
+    .product-infromation-component-checkbox-boxes input{
+        margin-right: 3px;
+        width: 2.5rem;
+    }
+    .product-infromation-component-checkbox-boxes label{
+        flex-basis: 50%;
+        font-size:  2rem;
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width:300px){ 
+    form{
+        margin-left: 0%;
+        width:100%;
+    }
+    .product-infromation-component-checkbox-boxes input{
+        width: 3.0rem;
+    }
+}
+
+/*  Min width in 250*/

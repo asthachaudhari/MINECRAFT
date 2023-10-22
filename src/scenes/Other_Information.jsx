@@ -7,7 +7,7 @@ function Other_Information({notesOrRemarks, emailForQuotation, handleInputChange
     return (
         <>
             <div className="otherInfo">
-                <h2>Other Information</h2>
+            <div className="sub-heading">Other Information</div>
                 <div>
                     <TextArea_Structure 
                         requirement={true}
