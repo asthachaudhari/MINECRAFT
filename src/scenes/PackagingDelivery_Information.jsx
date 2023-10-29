@@ -23,7 +23,7 @@ function PackagingDelivery_Information({
           <div className="component">
             <DropDown_Structure
               requirement={true}
-              label_value="Packing Type"
+              label_value="Packing Type*"
               id_value="packingType"
               value={packingType}
               onchange_value={handleInputChange}
@@ -33,7 +33,7 @@ function PackagingDelivery_Information({
           <div className="component">
             <DropDown_Structure
               requirement={true}
-              label_value="Delivery Mode"
+              label_value="Delivery Mode*"
               id_value="deliveryMode"
               value={deliveryMode}
               onchange_value={handleInputChange}

@@ -17,7 +17,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                     <div className="component">
                         <Input_Structure 
                             requirement={true}
-                            label_value="Name of Company"
+                            label_value="Name of Company*"
                             id_value="companyName" 
                             value={companyName}  
                             onchange_value={handleInputChange} />
@@ -25,7 +25,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                     <div className="component">
                         <TextArea_Structure 
                             requirement={true}
-                            label_value="Company Address"
+                            label_value="Company Address*"
                             id_value="companyAddress" 
                             value={companyAddress}  
                             onchange_value={handleInputChange} />
@@ -33,7 +33,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                     <div className="component">
                         <DropDown_Structure
                             requirement={true}
-                            label_value="Country"
+                            label_value="Country*"
                             id_value="country" 
                             value={country}  
                             onchange_value={handleInputChange}
@@ -42,7 +42,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                     <div className="component">
                         <DropDown_Structure
                             requirement={true}
-                            label_value="State"
+                            label_value="State*"
                             id_value="state" 
                             value={state}  
                             onchange_value={handleInputChange}
@@ -50,7 +50,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                     </div>
                     <div className="component">
                         <Input_Structure 
-                            label_value="City/Village"
+                            label_value="City/Village*"
                             id_value="city" 
                             value={city}  
                             onchange_value={handleInputChange} />
@@ -58,7 +58,7 @@ function Company_Information({companyName, companyAddress, country, state, city,
                     <div className="component">
                         <Input_Structure 
                             requirement={true}
-                            label_value="Pin Code"
+                            label_value="Pin Code*"
                             type_value="number"
                             id_value="pincode" 
                             value={pincode}  

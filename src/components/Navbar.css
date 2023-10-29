@@ -18,7 +18,7 @@ html {
 }
 
 .container {
-  background: #055bb9;
+  background: orange;
   padding: 10px 20px;
   box-shadow: 0 10px 20px rgba(31, 31, 31, 0.2);
   display: flex;
@@ -48,7 +48,7 @@ html {
 
 .nav-links li:hover {
   color: #000;
-  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff;
   transition: 0.5s;
 }
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Company_Information from "../scenes/Company_Information";
 import Contact_Information from "../scenes/Contact_Information";
 import Product_Information from "../scenes/Product_Information";
@@ -6,6 +6,8 @@ import PackagingDelivery_Information from "../scenes/PackagingDelivery_Informati
 import Get_Sample from "../scenes/Get_Sample";
 import Other_Information from "../scenes/Other_Information";
 import "./Forms_Structure.css";
+import emailjs from '@emailjs/browser';
+
 
 function Forms_Structure() {
   const [processInfo, setProcessInfo] = React.useState({
@@ -80,13 +82,68 @@ function Forms_Structure() {
     });
   }, [processInfo]);
 
+  const form = useRef();
+
   const handleSubmit = (event) => {
+    event.preventDefault(); 
     console.log("formInfo state:", formInfo);
-    event.preventDefault();
+
+    emailjs.sendForm('service_13rubp5', 'template_uynv3zo', form.current, '8Hu96Z53PEfkk6aMn')
+    .then((result) => {
+        console.log(result.text);
+        alert("You have successfully submitted the form!");
+        // Reset input fields
+        setformInfo({
+          companyName: "",
+          companyAddress: "",
+          country: "",
+          state: "",
+          city: "",
+          pincode: "",
+          gender: "Mr",
+          contactPerson: "",
+          designation: "",
+          department: "",
+          email: "",
+          contactNumber: "",
+          whatsappNumber: "",
+          wechatNumber: "",
+          website: "",
+          productBentonite: "",
+          productBentoniteOther: "",
+          application: "",
+          packingType: "",
+          deliveryMode: "",
+          getSampleOnAddress: "",
+          getSampleInCountry: "",
+          getSampleInState: "",
+          getSampleInCity: "",
+          getSampleOnPincode: "",
+          notesOrRemarks: "",
+          emailForQuotation: "",
+        });
+
+        // Reset dropdowns
+        setProcessInfo({
+          Piling: false,
+          China_Clay: false,
+          Foundry: false,
+          Cat_Litter: false,
+          Drilling: false,
+          Calcium_Lumps: false,
+          Water_Proofing: false,
+          Sodium_Lumps: false,
+          Earthing: false,
+        });
+
+    }, (error) => {
+        console.log(error.text);
+    });
+    
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form ref={form} onSubmit={handleSubmit}>
       <div className="heading">INQUIRY FORM</div>
       <div className="instructions">
         Fill out below Inquiry-form and get Quotation on Email, * Fields are

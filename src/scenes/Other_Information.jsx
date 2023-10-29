@@ -13,7 +13,7 @@ function Other_Information({notesOrRemarks, emailForQuotation, handleInputChange
                 <div className="component">
                     <TextArea_Structure 
                         requirement={true}
-                        label_value="Notes/Remarks"
+                        label_value="Notes/Remarks*"
                         id_value="notesOrRemarks" 
                         value={notesOrRemarks}  
                         onchange_value={handleInputChange} />
@@ -21,7 +21,7 @@ function Other_Information({notesOrRemarks, emailForQuotation, handleInputChange
                 <div className="component">
                     <Input_Structure 
                         requirement={true}
-                        label_value="Quotation Email"
+                        label_value="Quotation Email*"
                         id_value="emailForQuotation" 
                         value={emailForQuotation}  
                         onchange_value={handleInputChange} />

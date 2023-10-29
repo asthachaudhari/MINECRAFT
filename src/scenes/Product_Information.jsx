@@ -16,7 +16,7 @@ function Product_Information({productBentonite, productBentoniteOther, applicati
                     <div className="product-infromation-component">
                         <DropDown_Structure
                             requirement={true}
-                            label_value="Product Bentonite"
+                            label_value="Product Bentonite*"
                             id_value="productBentonite" 
                             value={productBentonite}  
                             onchange_value={handleInputChange}
@@ -39,7 +39,7 @@ function Product_Information({productBentonite, productBentoniteOther, applicati
                         style={{height:"1px", width: "1px", margin: "0px"}}
                         />
                         <CheckList_Structure
-                            label_value="Application"
+                            label_value="Application*"
                             id_value="selectedApplication" 
                             value={application}  
                             onchange_value={handleInputChange}
