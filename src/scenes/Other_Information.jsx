@@ -8,7 +8,9 @@ function Other_Information({notesOrRemarks, emailForQuotation, handleInputChange
         <>
             <div className="otherInfo">
             <div className="sub-heading">Other Information</div>
-                <div>
+            <div className="parent-container">
+
+                <div className="component">
                     <TextArea_Structure 
                         requirement={true}
                         label_value="Notes/Remarks"
@@ -16,13 +18,14 @@ function Other_Information({notesOrRemarks, emailForQuotation, handleInputChange
                         value={notesOrRemarks}  
                         onchange_value={handleInputChange} />
                 </div>
-                <div>
+                <div className="component">
                     <Input_Structure 
                         requirement={true}
-                        label_value="Email for Quotation"
+                        label_value="Quotation Email"
                         id_value="emailForQuotation" 
                         value={emailForQuotation}  
                         onchange_value={handleInputChange} />
+                </div>
                 </div>
             </div>
         </>

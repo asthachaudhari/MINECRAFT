@@ -5,10 +5,9 @@ import Product_Information from "../scenes/Product_Information";
 import PackagingDelivery_Information from "../scenes/PackagingDelivery_Information";
 import Get_Sample from "../scenes/Get_Sample";
 import Other_Information from "../scenes/Other_Information";
-import './Forms_Structure.css';
+import "./Forms_Structure.css";
 
 function Forms_Structure() {
-
   const [processInfo, setProcessInfo] = React.useState({
     Piling: false,
     China_Clay: false,
@@ -18,7 +17,7 @@ function Forms_Structure() {
     Calcium_Lumps: false,
     Water_Proofing: false,
     Sodium_Lumps: false,
-    Earthing: false
+    Earthing: false,
   });
 
   const [formInfo, setformInfo] = React.useState({
@@ -56,48 +55,46 @@ function Forms_Structure() {
     if (name === "selectedApplication") {
       setProcessInfo({
         ...processInfo,
-        [value]: !processInfo[value]
+        [value]: !processInfo[value],
       });
-    }
-    else if (name === "productBentonite") {
+    } else if (name === "productBentonite") {
       setformInfo({
         ...formInfo,
         [name]: value,
-        productBentoniteOther: ""
+        productBentoniteOther: "",
       });
-    }
-    else {
+    } else {
       setformInfo({
         ...formInfo,
-        [name]: value
+        [name]: value,
       });
     }
   };
 
   useEffect(() => {
-    const keys = Object.keys(processInfo)
-    const selectedprocesses = keys.filter((key) => processInfo[key])
+    const keys = Object.keys(processInfo);
+    const selectedprocesses = keys.filter((key) => processInfo[key]);
     setformInfo({
       ...formInfo,
-      application: selectedprocesses
+      application: selectedprocesses,
     });
   }, [processInfo]);
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     console.log("formInfo state:", formInfo);
     event.preventDefault();
-  }
+  };
 
   return (
     <form onSubmit={handleSubmit}>
       <div className="heading">INQUIRY FORM</div>
       <div className="instructions">
-          Fill out below Inquiry-form and get Quotation on Email, * Fields are
-          mandatory
+        Fill out below Inquiry-form and get Quotation on Email, * Fields are
+        mandatory
       </div>
       <hr />
       <div className="formsInput">
-        <Company_Information 
+        <Company_Information
           companyName={formInfo.companyName}
           companyAddress={formInfo.companyAddress}
           country={formInfo.country}
@@ -105,9 +102,9 @@ function Forms_Structure() {
           city={formInfo.city}
           pincode={formInfo.pincode}
           handleInputChange={handleInputChange}
-          />
+        />
         <hr />
-        < Contact_Information 
+        <Contact_Information
           contactPerson={formInfo.contactPerson}
           gender={formInfo.gender}
           designation={formInfo.designation}
@@ -118,40 +115,42 @@ function Forms_Structure() {
           wechatNumber={formInfo.wechatNumber}
           website={formInfo.website}
           handleInputChange={handleInputChange}
-          />
+        />
         <hr />
-        <Product_Information 
+        <Product_Information
           productBentonite={formInfo.productBentonite}
           productBentoniteOther={formInfo.productBentoniteOther}
           application={formInfo.application}
           handleInputChange={handleInputChange}
-          />
+        />
         <hr />
-        <PackagingDelivery_Information 
+        <PackagingDelivery_Information
           packingType={formInfo.packingType}
           packingQty={formInfo.packingQty}
           packingQtyValue={formInfo.packingQtyValue}
           deliveryMode={formInfo.deliveryMode}
           handleInputChange={handleInputChange}
-          />
+        />
         <hr />
-        <Get_Sample 
+        <Get_Sample
           getSampleOnAddress={formInfo.getSampleOnAddress}
           getSampleInCountry={formInfo.getSampleInCountry}
           getSampleInState={formInfo.getSampleInState}
           getSampleInCity={formInfo.getSampleInCity}
           getSampleOnPincode={formInfo.getSampleOnPincode}
           handleInputChange={handleInputChange}
-          />
+        />
         <hr />
-        <Other_Information 
+        <Other_Information
           notesOrRemarks={formInfo.notesOrRemarks}
           emailForQuotation={formInfo.emailForQuotation}
           handleInputChange={handleInputChange}
-          />
-        </div>
-        <hr />
-        <input type='submit' id="submit-button" name="submit-button" />
+        />
+      </div>
+      <hr />
+      <div className="submit-button">
+        <input type="submit" id="submit-button" name="submit-button" />
+      </div>
     </form>
   );
 }

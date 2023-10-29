@@ -13,15 +13,16 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
         <>
             <div className="getSample">
             <div className="sub-heading">Get Sample</div>
-                <div>
+            <div className="parent-container">
+                <div className="component">
                     <TextArea_Structure 
                         requirement={true}
-                        label_value="Get Sample on Address"
+                        label_value="Address"
                         id_value="getSampleOnAddress" 
                         value={getSampleOnAddress}  
                         onchange_value={handleInputChange} />
                 </div>
-                <div>
+                <div  className="component">
                     <DropDown_Structure
                         requirement={true}
                         label_value="Country"
@@ -30,7 +31,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                         onchange_value={handleInputChange}
                         options_value={countryOptions} />
                 </div>
-                <div>
+                <div className="component">
                     <DropDown_Structure
                         requirement={true}
                         label_value="State"
@@ -39,7 +40,7 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                         onchange_value={handleInputChange}
                         options_value={stateOptions} />
                 </div>
-                <div>
+                <div className="component">
                     <Input_Structure 
                         requirement={true}
                         label_value="City/Village"
@@ -47,14 +48,15 @@ function Get_Sample({getSampleOnAddress, getSampleInCountry, getSampleInState, g
                         value={getSampleInCity}  
                         onchange_value={handleInputChange} />
                 </div>
-                <div>
+                <div className="component">
                     <Input_Structure 
                         requirement={true}
-                        label_value="Pin code or Zip code"
+                        label_value="Pin code"
                         type_value="number"
                         id_value="getSampleOnPincode" 
                         value={getSampleOnPincode}  
                         onchange_value={handleInputChange} />
+                </div>
                 </div>
             </div>
         </>
